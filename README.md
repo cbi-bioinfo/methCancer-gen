@@ -4,6 +4,7 @@ methCancer-gen is a deep neural network-based tool for generating DNA methylome 
 
 ## Requirements
 * Tensorflow (>= 1.8.0)
+* Python (>= 2.7)
 * Python packages : numpy, pandas
 
 ## Usage
