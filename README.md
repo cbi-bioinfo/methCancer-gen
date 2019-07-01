@@ -1,6 +1,7 @@
 # methCancer-gen: a DNA methylome dataset generator for user-specified cancer type based on conditional variational autoencoder
-methCancer-gen is a deep neural network-based tool for generating DNA methylome dataset based on a user-specified cancer-type. It may enhance efficiency in cancer related research, employing a conditional variational autoencoder.
+methCancer-gen is a deep neural network-based tool for generating DNA methylome dataset based on a user-specified cancer-type. With the matrix of DNA methylation beta values and matched cancer type information as input, the methCancer-gen approximates the underlying distribution model of the input data. After model training, methylation beta value for the specified cancer type can be generated as output. methCancer-gen can address the lack of DNA methylation data and enhance efficiency in cancer related research.
 
+![Figure](https://github.com/cbi-bioinfo/methCancer-gen/blob/master/cancer_generator.jpg?raw=true)
 
 ## Requirements
 * Tensorflow (>= 1.8.0)
