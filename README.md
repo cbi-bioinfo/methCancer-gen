@@ -15,7 +15,7 @@ Clone the repository or download source code files.
 
 * Reference: ./preprocessing/
 
-1. Prepare or edit **"cancer_type_info.csv"** file having **(1) cancer types to generate dataset** and **(2) matrix of DNA methylation beta value dataset file path** for each cancer. We recommend to generate dataset in 25 cancer types whose accuracies were validated in our manuscript using TCGA data as training dataset. The file should contain the headers and follow the format :
+1. Prepare or edit **"cancer_type_info.csv"** file having **(1) cancer types to generate dataset** and **(2) matrix of DNA methylation beta value dataset file path** for each cancer. We recommend to generate dataset in 25 cancer types whose accuracies were validated in our manuscript using TCGA data as training dataset. (They are listed in "cancer_type_info.csv" file.) The file should contain the headers and follow the format :
 
 ```
 cancer_type,datafile
@@ -23,6 +23,16 @@ BLCA,BLCA_TP.csv
 BRCA,BRCA_TP.csv
 CESC,CESC_TP.csv
 COAD,COAD_TP.csv
+...
+```
+
+Each data file should contain matrix of DNA methylation beta value, where rows and columns represents CpG sites and sample ID, respectively :
+
+```
+cpg,sample_1,sample_2,...,sample_n
+cg00000029,0.249737,0.464333,...,0.061501
+cg00000165,0.347463,0.115849,...,0.216793
+cg00000236,0.917430,0.881644,...,0.908840
 ...
 ```
 
