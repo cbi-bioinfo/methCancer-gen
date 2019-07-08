@@ -26,7 +26,7 @@ COAD,COAD_TP.csv
 ...
 ```
 
-Each data file should contain matrix of DNA methylation beta value, where rows and columns represents **CpG sites** and **sample ID**, respectively :
+Each data file should contain matrix of DNA methylation beta value, where each row and column represent **CpG site** and **sample ID**, respectively :
 
 ```
 cpg,sample_1,sample_2,...,sample_n
