@@ -80,9 +80,6 @@ n_de_h1 = 250
 n_de_h2 = 500
 n_out = n_features
 
-n_sm_h1 = n_code_h
-n_sm_h2 = n_code_h
-n_sm_out = n_classes
 
 print("# feature:", n_features, "# train sample:", len(x_data))
 
@@ -113,18 +110,11 @@ def decoder(_code, _Y ,_keep_prob, _phase, _reuse = False):
 		return decode,de_out
 
 
-def softmax(_code,_keep_prob, _phase):
-	fc1 = tf.nn.dropout(tf.nn.elu(fc_bn(_code, n_sm_h1, _phase, "fc1")), _keep_prob)
-	fc2 = tf.nn.dropout(tf.nn.elu(fc_bn(fc1, n_sm_h2, _phase, "fc2")), _keep_prob)
-	sm = tf.nn.softmax(fc_bn(fc2, n_sm_out, _phase, "sm"))
-	return sm
-
 
 # MODEL
 mu, sigma = encoder(tf_X, tf_Y, keep_prob, phase)
 z = mu + sigma * tf.random_normal(tf.shape(mu), 0, 1, dtype = tf.float32)
 decode,de_out = decoder(z, tf_Y, keep_prob, phase)
-sm_out = softmax(z, keep_prob, phase)
 
 # GENERATOR
 n_samples = len(generated_test_Y)
