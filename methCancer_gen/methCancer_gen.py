@@ -139,7 +139,7 @@ KL_divergence = 0.5 * tf.reduce_sum(tf.square(mu) + tf.square(sigma) - tf.log(1e
 
 marginal_likelihood = tf.reduce_mean(marginal_likelihood)
 KL_divergence = tf.reduce_mean(KL_divergence)
-vae_cost = marginal_likelihood + KL_divergence
+vae_cost = -1 * marginal_likelihood + KL_divergence
 train_op_vae = tf.train.AdamOptimizer(learning_rate=learn_rate_vae).minimize(vae_cost)
 _accuracy = tf.Variable(0)
 
