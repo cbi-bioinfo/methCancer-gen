@@ -56,4 +56,4 @@ COAD,100
 3. You can get the final output **"Generated_dataset_from_methCancer_gen.csv"**.
 
 ## Contact
-If you have any question or problem, please send an email to **miniymay@sookmyung.ac.kr**
+If you have any question or problem, please send an email to **joungmin@vt.edu**
